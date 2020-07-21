@@ -39,6 +39,15 @@ body {
     float: left;
 }
 
+.title-text-style(@bottom-margin, @text-align) {
+    display: block;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: #445161;
+    line-height: 1.2;
+    margin: 0 0 @bottom-margin 0;
+    text-align: @text-align;
+}
 
 .page-header-title {
     display: block;
@@ -103,12 +112,7 @@ body {
 }
 
 .about-product-title {
-    display: block;
-    font-size: 30px;
-    color: rgb(68, 81, 97);
-    line-height: 1.2;
-    text-align: left;
-    margin: 0 0 30px 0;
+    .title-text-style(30px, left);
 }
 
 .about-product-description {
@@ -146,12 +150,7 @@ body {
 }
 
 .dignity-title {
-    display: block;
-    font-size: 30px;
-    color: rgb(68, 81, 97);
-    line-height: 1.2;
-    text-align: center;
-    margin: 0 0 20px 0;
+    .title-text-style(20px, center);
 }
 
 .dignity-list {
@@ -214,12 +213,7 @@ body {
 }
 
 .screenshots-title {
-    display: block;
-    font-size: 30px;
-    color: rgb(68, 81, 97);
-    line-height: 1.2;
-    text-align: center;
-    margin: 0 0 20px 0;
+    .title-text-style(20px, center);
 }
 
 .screenshots-figure {
@@ -267,4 +261,159 @@ body {
     text-align: left;
     width: 340px;
     min-height: 108px;
+}
+
+.reviews {
+    padding: 50px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reviews-title {
+    width: 100%;
+    .title-text-style(20px, center);
+}
+
+.reviews-item {
+    width: 48%;
+    margin: 0 0 20px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews-item-photo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #445161;
+}
+
+.reviews-item-txt {
+    width: 80%;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        border: 13px solid transparent;
+        border-right: 13px solid #fff;
+        position: absolute;
+        top: 27px;
+        left: -26px;
+    }
+
+    &-author {
+        display: block;
+        margin: 5px 0 0 0;
+        font-weight: bold;
+        color: #989898;
+        font-size: 14px;
+        line-height: 1.286;
+    }
+}
+
+.price {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    /* align-content: flex-end; */
+}
+
+.price-title {
+    width: 100%;
+    .title-text-style(20px, center);
+}
+
+.price-item {
+    width: 25%;
+    margin: 0 20px 0 0;
+    box-sizing: border-box;
+    background-color: #445162;
+    border: 2px solid #445162;
+
+    &-title {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+        line-height: 1.25;
+        text-align: center;
+        padding: 17px;
+    }
+
+    &-price-value {
+        display: block;
+        font-size: 40px;
+        background-color: #fff;
+        color: #445162;
+        line-height: 0.75;
+        text-align: center;
+        padding: 18px;
+    }
+
+    &-options {
+        padding: 0 20px 0 38px;
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.714;
+        text-align: left;
+        list-style-position: inside;
+    }
+
+    &-btn {
+        display: block;
+        width: 280px;
+        margin: 20px 5px 20px 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #445162;
+
+        &:hover {
+            background-color: orange;
+
+            .price-item-btn-txt {
+                color: #445162;
+            }
+        }
+
+        &:active {
+            background-color: #fff;
+            color: black;
+        }
+    }
+
+    &-btn-txt {
+        text-transform: uppercase;
+        color: #445162;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+
+    }
+
+}
+
+.price-item:nth-child(4) {
+    margin: 0;
 }
