@@ -1,0 +1,43 @@
+// out: ../css/style.css, compress: false, strictMath: true
+
+@widthAll: 1920px;
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: @widthAll;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@import "mixins.less";
+
+
+.page-header-logo {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 181px;
+    text-decoration: none;
+    background-color: #484642;
+    color: #fff;
+
+    &-svg {
+        fill: currentColor;
+    }
+
+    &-txt {
+        font-family: Raleway;
+        font-size: 34px;
+        /* Approximation due to font substitution */
+        font-weight: 400;
+        text-align: right;
+    }
+
+    &:hover {
+        color: #998675;
+    }
+}
