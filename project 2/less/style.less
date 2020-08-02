@@ -12,7 +12,12 @@ body {
     box-sizing: border-box;
 }
 
-@import "mixins.less";
+.clear-both() {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
 
 .page-header {
     background-image: url('../img/photo.png');
@@ -42,6 +47,8 @@ body {
     text-decoration: none;
     color: #fff;
 
+
+
     &-svg {
         fill: currentColor;
     }
@@ -57,6 +64,10 @@ body {
     &:hover {
         color: #998675;
     }
+
+    &:active {
+        color: red;
+    }
 }
 
 .page-header-nav {
@@ -70,7 +81,7 @@ body {
     &-item {
         display: block;
         /*padding: 0 10px 0 10px;*/
-        font-family: "Montserrat";
+        font-family: "Montserrat Light";
         font-size: 14px;
         color: #fff;
         text-decoration: none;
@@ -79,6 +90,10 @@ body {
 
         &:hover {
             color: #c7b299;
+        }
+
+        &:active {
+            color: red;
         }
 
     }
@@ -100,22 +115,41 @@ body {
 
 .page-header-search {
     margin: 0 0 0 26px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    &-label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid green;
+        background-image: url('../img/icon-search.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
 
     &-input {
-        width: 130px;
+        transition: width 0.5s ease-in-out;
+        width: 0;
+        min-height: 0;
+        padding: 5px;
+        outline: none;
         box-sizing: border-box;
+        background-color: transparent;
         border: none;
-        font-size: 16px;
-        background: transparent;
-        background-image: url('../img/icon-search.png');
-        background-position: 10px 10px;
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        transition: width 0.4s ease-in-out;
+        position: absolute;
+        top: 40px;
         color: #fff;
+        font-size: 16px;
+        text-transform: capitalize;
+
 
         &:focus {
-            width: 100%;
+            width: 200px;
+            min-height: 20px;
+            border: 2px solid #fff;
         }
     }
 }
@@ -123,7 +157,7 @@ body {
 .page-header-carousel {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     margin: 270px 0 0 0;
     padding: 0 150px 0 150px;
     font-family: "Raleway";
@@ -169,7 +203,7 @@ body {
         &-h2 {
             font-family: "Raleway ExtraBold";
             font-size: 52px;
-            font-weight:800;
+            font-weight: 800;
         }
 
         & p {
@@ -190,6 +224,7 @@ body {
             background-color: #998675;
             border-radius: 3px;
             text-decoration: none;
+            word-break: break-all;
             box-shadow: inset 0px 3px 0px 0px rgba(115, 99, 87, 0.004);
 
             & span {
@@ -201,8 +236,17 @@ body {
                 font-weight: bold;
                 text-transform: uppercase;
                 line-height: 1.643;
+
+                &:hover {
+                    color: #c7b299;
+                }
+
+                &:active {
+                    color: red;
+                }
             }
         }
+
     }
 
     &-pagination {
@@ -223,6 +267,10 @@ body {
                 background-color: transparent;
                 border: 2px solid #cfbeaa;
                 transform: scale(1.2);
+            }
+
+            &:active {
+                border: 2px solid red;
             }
 
         }
