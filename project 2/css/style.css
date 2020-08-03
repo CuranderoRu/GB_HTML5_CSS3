@@ -173,6 +173,7 @@ body {
   font-weight: 800;
 }
 .page-header-carousel-content p {
+  font-family: "Montserrat Light";
   font-size: 16px;
   line-height: 1.5;
   width: 566px;
@@ -193,6 +194,7 @@ body {
   box-shadow: inset 0px 3px 0px 0px rgba(115, 99, 87, 0.004);
 }
 .page-header-carousel-content-btn span {
+  font-family: "Raleway ExtraBold";
   display: block;
   margin: auto;
   width: 100%;
@@ -376,7 +378,7 @@ body {
   display: block;
   margin: auto;
   font-size: 14px;
-  font-family: "Raleway";
+  font-family: "Raleway ExtraBold";
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
