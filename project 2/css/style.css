@@ -87,6 +87,9 @@ body {
 .page-header-cart-svg {
   fill: #fff;
 }
+.page-header-cart:hover .page-header-cart-svg {
+  fill: orange;
+}
 .page-header-search {
   margin: 0 0 0 26px;
   width: 30px;
