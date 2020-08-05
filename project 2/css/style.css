@@ -508,6 +508,12 @@ body {
 .main-proj-articles-item-btn-search {
   left: 54%;
 }
+.main-proj-articles-item-btn-search-svg:hover {
+  fill: #c7b299;
+}
+.main-proj-articles-item-btn-link-svg:hover {
+  fill: #c7b299;
+}
 .main-proj-articles-item-btn-search-svg,
 .main-proj-articles-item-btn-link-svg {
   fill: #fff;
@@ -539,4 +545,126 @@ body {
   text-transform: uppercase;
   line-height: 1.643;
   text-align: center;
+}
+.main-videopresentation {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #ccc;
+}
+.main-videopresentation-item {
+  margin: 0;
+  width: 100%;
+}
+.main-videopresentation-txt-wrp {
+  width: 600px;
+  padding: 10px;
+  box-sizing: border-box;
+  top: 209px;
+  position: absolute;
+}
+.main-videopresentation-txt-btn {
+  display: flex;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.main-videopresentation-txt-btn-icon {
+  margin: auto;
+  fill: #fff;
+}
+.main-videopresentation-txt-btn:hover .main-videopresentation-txt-btn-icon {
+  fill: #c7b299;
+}
+.main-videopresentation-txt-btn:active .main-videopresentation-txt-btn-icon {
+  fill: red;
+}
+.main-videopresentation-txt-title {
+  display: block;
+  width: 100%;
+  margin: 30px auto 0 auto;
+  font-size: 30px;
+  font-family: "Raleway Medium";
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
+.main-videopresentation-txt-p {
+  font-size: 16px;
+  font-family: "Montserrat Light";
+  color: #fff;
+  line-height: 1.75;
+  text-align: center;
+  width: 560px;
+  min-height: 44px;
+}
+.main-videopresentation-txt-time {
+  display: block;
+  margin: 40px auto 0 auto;
+  font-size: 14px;
+  font-family: "Montserrat Regular";
+  color: #c7b299;
+  line-height: 1.714;
+  text-align: center;
+}
+.main-mobile {
+  background-image: url("../img/iPhone%20in%20hand.png");
+  background-repeat: no-repeat;
+  background-position: top 79px left 420px;
+}
+.main-mobile-wrp {
+  padding: 195px 0 176px 875px;
+  min-height: 323px;
+}
+.main-mobile-header {
+  width: 100%;
+  font-size: 30px;
+  font-family: "Raleway SemiBold";
+  color: #555555;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+.main-mobile-content {
+  font-size: 16px;
+  font-family: "Montserrat Light";
+  color: #8c8c8c;
+  line-height: 1.75;
+  text-align: left;
+  width: 665px;
+  min-height: 100px;
+}
+.main-mobile-list {
+  margin: 40px auto;
+  font-size: 16px;
+  font-family: "Montserrat Light";
+  color: #8c8c8c;
+  line-height: 2;
+  text-align: left;
+  list-style: none;
+}
+.main-mobile-list-item {
+  position: relative;
+  padding: 0 0 0 60px;
+  width: 624px;
+  box-sizing: border-box;
+}
+.main-mobile-list-item:before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  background-image: url("../img/mobile-list-item-icon.svg");
+  background-size: cover;
 }
