@@ -1,5 +1,9 @@
 // main: style.less
 
+.invisible {
+    display: none;
+}
+
 .page-header {
     background-image: url('../img/photo.png');
     background-repeat: no-repeat;
@@ -24,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     width: 181px;
-    height: 56px;
+    min-height: 56px;
     text-decoration: none;
     color: #fff;
 
@@ -89,35 +93,40 @@
     background: transparent;
     border: none;
 
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
     &-svg {
         fill: #fff;
     }
-    
+
     &:hover &-svg {
         fill: orange;
     }
 
-    
+
 }
 
 .page-header-search {
     margin: 0 0 0 26px;
     width: 30px;
-    height: 30px;
+    min-height: 30px;
     position: relative;
 
     &-label {
         display: flex;
         align-items: center;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
     }
 
     &-svg {
         fill: #fff;
     }
 
-    
+
     &-input {
         transition: width 0.5s ease-in-out;
         width: 0;
@@ -140,7 +149,7 @@
             border: 2px solid #fff;
         }
     }
-    
+
     &:hover &-svg {
         fill: orange;
     }
@@ -214,7 +223,7 @@
             text-align: center;
             margin: 50px 0 0 0;
             width: 170px;
-            height: 53px;
+            min-height: 53px;
             background-color: #998675;
             border-radius: 3px;
             text-decoration: none;
@@ -231,21 +240,22 @@
                 font-weight: bold;
                 text-transform: uppercase;
                 line-height: 1.643;
-
-                &:hover {
-                    color: #c7b299;
-                }
-
-                &:active {
-                    color: red;
-                }
             }
+
+            &:hover span{
+                color: #c7b299;
+            }
+
+            &:active span{
+                color: red;
+            }
+
         }
 
     }
 
     &-pagination {
-        margin: 325px auto 0 auto;
+        margin: 325px auto 40px auto;
         width: 180px;
         display: flex;
         justify-content: space-between;
@@ -253,7 +263,7 @@
         &-item {
             display: block;
             width: 11px;
-            height: 11px;
+            min-height: 11px;
             background-color: #979594;
             border-radius: 50%;
             border: 2px solid transparent;
