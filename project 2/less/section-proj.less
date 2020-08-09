@@ -44,12 +44,13 @@
             border-radius: 3px;
             background-color: rgba(17, 17, 17, 0);
             width: 124px;
-            height: 36px;
+            min-height: 36px;
             font-size: 14px;
             font-family: "Montserrat Light";
             color: #8c8c8c;
             line-height: 1.5;
             text-align: center;
+            outline: none;
 
             &:hover {
                 background-color: #998675;
@@ -102,7 +103,6 @@
             right: 297px;
             top: -68px;
             border: 28px solid transparent;
-            //            border: 28px solid black;
             border-bottom: 10px solid #fbfaf8;
         }
 
@@ -111,7 +111,7 @@
             display: block;
             margin: 2px 0 0 29px;
             font-size: 14px;
-            font-family: "Montserrat";
+            font-family: "Montserrat Light";
             color: #d1d1d1;
             line-height: 1.429;
         }
@@ -119,7 +119,7 @@
         &-btn-link,
         &-btn-search {
             width: 26px;
-            height: 25px;
+            min-height: 25px;
             display: none;
             border: none;
             background-color: transparent;
@@ -127,12 +127,15 @@
             top: 30%;
             left: 39%;
         }
+
         &-btn-search {
             left: 54%;
         }
+
         &-btn-search-svg:hover {
             fill: #c7b299;
         }
+
         &-btn-link-svg:hover {
             fill: #c7b299;
         }
@@ -142,12 +145,31 @@
         &-btn-link-svg {
             fill: #fff;
         }
-        &:hover button{
+
+        &:hover button {
             display: block;
         }
-        &:hover .main-proj-articles-item-img{
+
+        &:hover &-img {
             filter: brightness(20%);
         }
+
+        &:hover {
+            background-color: #362f2d;
+        }
+
+        &:hover &-header {
+            color: #fff;
+        }
+
+        &:hover &-header:after {
+            border-bottom: 10px solid #362f2d;
+        }
+
+        &:hover &-content {
+            color: #a89682;
+        }
+
 
     }
 
@@ -160,7 +182,14 @@
         background-color: #998675;
         box-shadow: inset 0px -3px 0px 0px rgba(115, 99, 87, 0.004);
         width: 170px;
-        height: 50px;
+        min-height: 50px;
+        outline: none;
+
+        &:hover,
+        &:active {
+            border-color: #fff;
+            background-color: #fbfaf8;
+        }
 
         &-txt {
             display: block;
@@ -172,6 +201,15 @@
             text-transform: uppercase;
             line-height: 1.643;
             text-align: center;
+        }
+
+        &:hover &-txt {
+            color: #362f2d;
+            outline: none;
+        }
+
+        &:active &-txt {
+            color: red;
         }
     }
 }

@@ -53,7 +53,7 @@
                 text-align: center;
                 background-color: #363636;
                 width: 50px;
-                height: 35px;
+                min-height: 35px;
                 font-size: 24px;
                 font-family: "Montserrat Light";
                 color: #fff;
@@ -70,7 +70,7 @@
                 line-height: 1.667;
                 background-color: #252525;
                 width: 50px;
-                height: 25px;
+                min-height: 25px;
             }
         }
 
@@ -115,6 +115,21 @@
                 border-left: 5px solid #c7b299;
 
             }
+            
+            &:hover{
+                color: #fff;
+            }
+            &:hover:after{
+                border-left: 5px solid #fff;
+            }
+
+            &:active{
+                color: red;
+            }
+            &:active:after{
+                border-left: 5px solid red;
+            }
+
         }
 
         &:hover &-calendar-day {
@@ -156,8 +171,8 @@
         padding: 0;
         margin: 0 4px 0 4px;
         width: 22px;
-        height: 22px;
-        
+        min-height: 22px;
+        outline: none;
         &-icon{
             fill: #d1d1d1;
         }
