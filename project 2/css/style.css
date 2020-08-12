@@ -1304,3 +1304,17 @@ body {
   font-size: 14px;
   line-height: 1.429;
 }
+@media (min-width: 400px) {
+  .page-header-carousel,
+  .main-adv,
+  .main-screens,
+  .main-achievements,
+  .footer-misc {
+    display: none;
+  }
+}
+@media (min-width: 400px) {
+  .page-header {
+    min-height: 140px;
+  }
+}
