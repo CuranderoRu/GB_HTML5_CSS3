@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Зачетный макет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 CSS3 portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -33,14 +35,20 @@
                     <span class="page-header-logo-txt">Waxom</span>
                 </a>
                 <nav class="page-header-nav">
-                    <a href="#" class="page-header-nav-item">Home</a>
-                    <a href="#" class="page-header-nav-item">About Us</a>
-                    <a href="#" class="page-header-nav-item">Portfolio</a>
-                    <a href="#" class="page-header-nav-item">Features</a>
-                    <a href="#" class="page-header-nav-item">Blog</a>
-                    <a href="#" class="page-header-nav-item">Pricing</a>
-                    <a href="#" class="page-header-nav-item">Shortcodes</a>
-                    <a href="#" class="page-header-nav-item">Contact</a>
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="page-header-nav-mobile-menu-btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="page-header-nav-menu">
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#">Home</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#">About Us</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#portfolio">Portfolio</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#">Features</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#posts">Blog</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#">Pricing</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#">Shortcodes</a></li>
+                        <li class="page-header-nav-item"><a class="page-header-nav-item-link" href="#">Contact</a></li>
+                    </ul>
                 </nav>
                 <button class="page-header-cart">
                     <svg class="page-header-cart-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="24">
@@ -139,7 +147,7 @@
                 </div>
             </aside>
             <section class="main-proj">
-                <span class="main-proj-header">Our Latest Projects.</span>
+                <span class="main-proj-header">Our Latest Projects.<a name="portfolio"></a></span>
                 <p class="main-proj-content">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
                 <div class="main-proj-switches">
                     <button class="main-proj-switches-btn">All</button>
@@ -270,7 +278,7 @@
                         <li class="main-mobile-list-item">Nam liber tempor cum soluta nobis eleifend option;</li>
                         <li class="main-mobile-list-item">Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
                         <li class="main-mobile-list-item">Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
-                        <li class="main-mobile-list-item">nvestigationes demonstraverunt lectores</li>
+                        <li class="main-mobile-list-item">Investigationes demonstraverunt lectores</li>
                     </ul>
                 </div>
             </section>
@@ -314,7 +322,7 @@
 
             </section>
             <section class="main-posts">
-                <span class="main-posts-header">Recent Posts.</span>
+                <span class="main-posts-header">Recent Posts.<a name="posts"></a></span>
                 <p class="main-posts-caption">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
                 <div class="main-posts-article-wrp">
                     <article class="main-posts-article">
@@ -425,4 +433,22 @@
             </section>
         </footer>
     </div>
-</body></html>
+    <script>
+        $('#menu__toggle').on('change', function() {
+            if ($(this).prop('checked')) {
+                $(".container").addClass("fixed");
+            } else {
+                $(".container").removeClass("fixed");
+            }
+        }).trigger("change");
+        var menu_links = document.querySelectorAll("a.page-header-nav-item-link");
+         for(var i = 0; i < menu_links.length; i++) {
+            menu_links[i].addEventListener("click", function(){
+                $('#menu__toggle').prop('checked', false);
+                $(".container").removeClass("fixed");
+            });
+        }
+    </script>
+</body>
+
+</html>
